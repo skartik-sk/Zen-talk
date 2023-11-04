@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ZenTalk" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.ZenTalk" parent="Base.Theme.ZenTalk" />
+    <style name="Theme.App.ZenTalk" parent="Theme.ZenTalk">
+         <item name="windowSplashScreenBackground">
+             @color/bgorange
+         </item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/newlogo</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.ZenTalk</item>
+    </style>
+
+
+
+</resources>

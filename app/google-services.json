@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "376801916154",
+    "project_id": "zentalk-f2c93",
+    "storage_bucket": "zentalk-f2c93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376801916154:android:a99ea1627331a43b304543",
+        "android_client_info": {
+          "package_name": "com.example.zen_talk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaSlObe41ExBr7P-R8BO3qjC2Bg2D9NUE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

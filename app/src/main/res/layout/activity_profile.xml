@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Profile"
+
+    android:backgroundTint="#F9FFFE">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15sp"
+        android:gravity="center"
+
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Choose how other see you"
+            android:textColor="#56B7C3"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="138dp"
+            tools:layout_editor_absoluteY="49dp" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/baseline_face_24" />
+
+        <EditText
+            android:id="@+id/e1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:background="@drawable/edit_textfiled"
+            android:drawableStart="@drawable/baseline_person_24"
+            android:fontFamily="@font/lato_bold"
+            android:hint="Name" />
+        <EditText
+        android:id="@+id/e3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:background="@drawable/edit_textfiled"
+        android:drawableStart="@drawable/baseline_tag_24"
+        android:fontFamily="@font/lato_bold"
+        android:hint="#tag" />
+        <EditText
+            android:id="@+id/e2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:background="@drawable/edit_textfiled"
+            android:drawableStart="@drawable/baseline_edit_note_24"
+            android:fontFamily="@font/lato_bold"
+            android:hint="About yourself" />
+
+        <Button
+            android:id="@+id/button"
+
+            android:layout_width="200dp"
+            android:layout_height="63dp"
+            android:layout_marginBottom="16sp"
+            android:backgroundTint="#56B7C3"
+            android:text="Update profile"
+            android:textSize="20sp" />
+
+
+
+    </LinearLayout>
+</LinearLayout>

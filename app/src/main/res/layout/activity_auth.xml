@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".auth"
+
+        android:backgroundTint="#F9FFFE">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15sp"
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16sp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Verify your self"
+                android:textColor="#56B7C3"
+                android:textSize="32sp"
+                tools:layout_editor_absoluteX="138dp"
+                tools:layout_editor_absoluteY="49dp" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="253dp"
+                        android:layout_height="237dp"
+                        app:srcCompat="@drawable/authentication" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:gravity="center_horizontal"
+                        android:text="We will send OTP on your number to verify." />
+
+                    <EditText
+                        android:id="@+id/phnumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16sp"
+                        android:background="@drawable/edit_textfiled"
+                        android:drawableStart="@drawable/baseline_phone_android_24"
+                        android:fontFamily="@font/lato_bold"
+                        android:inputType="number"
+                        android:hint="Enter your number" />
+
+                    <Button
+                        android:id="@+id/button"
+
+                        android:layout_width="173dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16sp"
+                        android:backgroundTint="#56B7C3"
+                        android:text="Get OTP"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </LinearLayout>
+
+</LinearLayout>
+

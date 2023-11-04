@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".pincreat"
+
+    android:backgroundTint="#F9FFFE">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15sp"
+        android:gravity="center"
+
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Creat 5 digit pin"
+            android:textColor="#56B7C3"
+            android:textSize="32sp"
+            tools:layout_editor_absoluteX="138dp"
+            tools:layout_editor_absoluteY="49dp" />
+
+
+        <EditText
+            android:id="@+id/e1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:background="@drawable/edit_textfiled"
+            android:drawableStart="@drawable/baseline_fiber_pin_24"
+            android:fontFamily="@font/lato_bold"
+            android:hint="Enter your pin"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/e2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:background="@drawable/edit_textfiled"
+            android:drawableStart="@drawable/baseline_fiber_pin_24"
+            android:fontFamily="@font/lato_bold"
+            android:hint="Confirm your pin"
+            android:inputType="number" />
+
+
+
+
+
+
+
+
+
+        <Button
+            android:id="@+id/button"
+
+            android:layout_width="173dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:textSize="20sp"
+            android:backgroundTint="#56B7C3"
+            android:text="Creat pin" />
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+   >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+android:layout_margin="4dp"
+android:padding="12dp">
+
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userImage"
+        androidLayout_centerVertical="true"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/baseline_person_24" />
+
+    <LinearLayout
+        android:layout_width="227dp"
+        android:layout_height="wrap_content"
+
+        android:layout_centerVertical="true"
+        android:layout_marginStart="12dp"
+
+        android:layout_marginEnd="29dp"
+
+        android:layout_toStartOf="@+id/timedaba"
+        android:layout_toEndOf="@id/userImage"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shubham Pandey"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/recent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent chat" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/timedaba"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="67dp"
+            android:id="@+id/time"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="time" />
+
+        <TextView
+            android:id="@+id/numberoftext"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/circle"
+android:layout_marginTop="12dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="2"
+            android:textSize="14dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout></RelativeLayout>
+</androidx.cardview.widget.CardView>
