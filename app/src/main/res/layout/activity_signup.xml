@@ -32,16 +32,6 @@
             tools:layout_editor_absoluteY="49dp" />
 
 
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16sp"
-            android:gravity="center"
-            android:text="-------Use Social-----"
-            android:textColor="#534D4D" />
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
