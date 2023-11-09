@@ -1,4 +1,4 @@
-package com.example.zen_talk
+package com.example.zen_talk.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -31,7 +31,7 @@ class OTP : AppCompatActivity() {
         dialog = builder. create()
         dialog.show()
         val kuch = intent.getStringExtra("number")
-
+Toast.makeText(this, auth.currentUser?.email.toString(),Toast.LENGTH_LONG).show()
         val phno = "+91"+kuch
         binding.num.text = phno;
         val options = PhoneAuthOptions.newBuilder(auth)
@@ -74,13 +74,12 @@ class OTP : AppCompatActivity() {
                 val  credential = PhoneAuthProvider.getCredential(varificatoinid, binding.phnumber.text!!.toString())
 
 
-                auth.signInWithCredential(credential).addOnCompleteListener{
+                auth.currentUser?.linkWithCredential(credential)?.addOnCompleteListener{
                     if(it.isSuccessful){
                         dialog.dismiss()
-startActivity(Intent(this,Profile::class.java))
+                        startActivity(Intent(this, pincreat::class.java))
                         finish()
-                    }else
-                    {
+                    }else {
                         Toast.makeText(this, "error ${it.exception}", Toast.LENGTH_SHORT).show()
                     }
                 }

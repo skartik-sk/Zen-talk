@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,8 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".MainActivity"
-
+    tools:context=".activities.MainActivity"
     android:backgroundTint="#F9FFFE">
 
     <LinearLayout
@@ -15,10 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="15sp"
         android:gravity="center"
-
         android:orientation="vertical">
-
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -31,6 +28,50 @@
             tools:layout_editor_absoluteX="138dp"
             tools:layout_editor_absoluteY="49dp" />
 
+
+
+
+        <EditText
+            android:id="@+id/e2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:background="@drawable/edit_textfiled"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:fontFamily="@font/lato_bold"
+            android:hint="Enter your Email" />
+
+        <EditText
+            android:id="@+id/e3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+
+            android:background="@drawable/edit_textfiled"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawableEnd="@drawable/baseline_remove_red_eye_24"
+            android:fontFamily="@font/lato_bold"
+            android:hint="Enter your Password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="173dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+android:textSize="20sp"
+            android:backgroundTint="#56B7C3"
+            android:text="Login" />
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:gravity="center"
+            android:text="-------or use your social log in-----"
+            android:textColor="#534D4D" />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -52,47 +93,8 @@
         </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16sp"
-            android:gravity="center"
-            android:text="-------or use your email to log in-----"
-            android:textColor="#534D4D" />
 
 
-        <EditText
-            android:id="@+id/e2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16sp"
-            android:background="@drawable/edit_textfiled"
-            android:drawableStart="@drawable/baseline_email_24"
-            android:fontFamily="@font/lato_bold"
-            android:hint="Enter your Email" />
-
-        <EditText
-            android:id="@+id/e3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16sp"
-            android:background="@drawable/edit_textfiled"
-            android:drawableStart="@drawable/baseline_lock_24"
-            android:drawableEnd="@drawable/baseline_remove_red_eye_24"
-            android:fontFamily="@font/lato_bold"
-            android:hint="Enter your Password"
-            android:inputType="textPassword" />
-
-        <Button
-            android:id="@+id/button"
-
-            android:layout_width="173dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16sp"
-android:textSize="20sp"
-            android:backgroundTint="#56B7C3"
-            android:text="Login" />
 
         <TextView
             android:id="@+id/toSignup"
@@ -100,7 +102,18 @@ android:textSize="20sp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:textSize="15dp"
-            android:text="Don't have account? Signup" />
+            android:text="Don't have account? Signup" >
+
+        </TextView>
+        <TextView
+            android:id="@+id/topin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="15dp"
+            android:textColor="#A7A7A7"
+            android:layout_marginTop="30dp"
+            android:text="Want to use pin to login?" />
 
 
     </LinearLayout>

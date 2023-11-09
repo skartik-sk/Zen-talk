@@ -1,3 +1,4 @@
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -28,6 +29,7 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
+
     buildFeatures{
         viewBinding = true
     }
@@ -37,6 +39,13 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    sourceSets {
+        getByName("main") {
+            res {
+                srcDirs("src/main/res", "src/main/res/layouts/chat_act")
+            }
+        }
     }
 
 }
@@ -63,4 +72,11 @@ dependencies {
     implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation( "com.github.bumptech.glide:glide:4.16.0")
     implementation ("com.google.android.gms:play-services-safetynet:18.0.1")
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+
+    // Add the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-auth")
+    implementation ("com.facebook.android:facebook-android-sdk:latest.release")
 }

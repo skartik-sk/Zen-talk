@@ -7,7 +7,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        tools:context=".activities.auth"
+        tools:context=".activities.enterpin"
+
         android:backgroundTint="#F9FFFE">
 
         <LinearLayout
@@ -25,7 +26,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16sp"
                 android:fontFamily="@font/lato_bold"
-                android:text="Verify your self"
+                android:text="Enter your created pin"
+                android:gravity="center_horizontal"
                 android:textColor="#56B7C3"
                 android:textSize="32sp"
                 tools:layout_editor_absoluteX="138dp"
@@ -48,15 +50,10 @@
                     <ImageView
                         android:id="@+id/imageView2"
                         android:layout_width="253dp"
-                        android:layout_height="237dp"
-                        app:srcCompat="@drawable/authentication" />
+                        android:layout_height="230dp"
+                        app:srcCompat="@drawable/bro"
+                        android:layout_marginBottom="20dp"/>
 
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="match_parent"
-                        android:layout_height="44dp"
-                        android:gravity="center_horizontal"
-                        android:text="We will send OTP on your number to verify." />
 
                     <EditText
                         android:id="@+id/phnumber"
@@ -64,10 +61,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16sp"
                         android:background="@drawable/edit_textfiled"
-                        android:drawableStart="@drawable/baseline_phone_android_24"
+                        android:drawableStart="@drawable/baseline_fiber_pin_24"
                         android:fontFamily="@font/lato_bold"
                         android:inputType="number"
-                        android:hint="Enter your number" />
+                        android:hint="Enter your pin" />
 
                     <Button
                         android:id="@+id/button"
@@ -76,8 +73,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16sp"
                         android:backgroundTint="#56B7C3"
-                        android:text="Get OTP"
+                        android:text="Verify"
                         android:textSize="20sp" />
+                    <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_horizontal"
+                    android:text="Want to login with Email and Password?"
+                    android:textColor="@color/material_dynamic_neutral30" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -86,5 +92,7 @@
 
         </LinearLayout>
 
-</LinearLayout>
+    </LinearLayout>
+
+
 

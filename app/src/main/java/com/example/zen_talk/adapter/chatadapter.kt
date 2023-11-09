@@ -6,10 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
 import com.example.zen_talk.R
-import com.example.zen_talk.chatingact
+import com.example.zen_talk.activities.chatingact
 import com.example.zen_talk.databinding.ChatUserItemBinding
 import com.example.zen_talk.model.usermodel
 
@@ -32,7 +31,7 @@ class chatadapter (var context: Context, var list: ArrayList<usermodel>): Recycl
         Glide.with(context).load(user.imageUrl).into(holder.binding.userImage)
         holder.binding.userName.text= user.name
         holder.itemView.setOnClickListener{
-            val intent = Intent(context,chatingact::class.java)
+            val intent = Intent(context, chatingact::class.java)
             intent.putExtra("uid", user.vid)
             context.startActivity(intent)
         }

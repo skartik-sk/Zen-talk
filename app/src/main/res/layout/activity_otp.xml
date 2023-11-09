@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".OTP"
+    tools:context=".activities.OTP"
 
     android:backgroundTint="#F9FFFE">
 
@@ -50,24 +50,28 @@
                     android:id="@+id/imageView2"
                     android:layout_width="253dp"
                     android:layout_height="230dp"
-                    app:srcCompat="@drawable/otp" />
+                    app:srcCompat="@drawable/rafiki" />
 
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="We have send OTP on your number to verify." />
+                    android:text="We have send OTP on your number to verify."
+                    android:textColor="@color/material_dynamic_neutral30" />
+
                 <TextView
                     android:id="@+id/num"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:layout_marginBottom="16sp"
                     android:background="@drawable/edit_textfiled"
                     android:drawableStart="@drawable/baseline_phone_android_24"
                     android:fontFamily="@font/lato_bold"
+                    android:hint="Enter your number"
                     android:inputType="number"
-                    android:hint="Enter your number" />
+                    android:textSize="16sp" />
                 <EditText
                     android:id="@+id/phnumber"
                     android:layout_width="match_parent"

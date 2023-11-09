@@ -1,13 +1,11 @@
-package com.example.zen_talk
+package com.example.zen_talk.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 import com.example.zen_talk.adapter.viewspager
 import com.example.zen_talk.databinding.ActivityHomeBinding
-import com.example.zen_talk.databinding.ActivityMainBinding
 import com.example.zen_talk.ui.call
 import com.example.zen_talk.ui.chat
 import com.example.zen_talk.ui.group
@@ -25,6 +23,7 @@ class home : AppCompatActivity() {
         fragmentarrlist.add(group())
         fragmentarrlist.add(call())
         auth = FirebaseAuth.getInstance()
+
         if(auth.currentUser== null){
             startActivity(Intent(this,auth::class.java))
             finish()
@@ -33,8 +32,7 @@ class home : AppCompatActivity() {
         binding!!.viewPager.adapter=adtapter
         binding!!.tabs.setupWithViewPager(binding!!.viewPager)
         binding!!.toProfile.setOnClickListener {
-            startActivity(Intent(this,Profile::class.java))
+            startActivity(Intent(this, Profile::class.java))
         }
     }
-
 }

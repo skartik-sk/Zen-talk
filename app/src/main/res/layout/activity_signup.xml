@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".signup"
-
+    tools:context=".activities.signup"
     android:backgroundTint="#F9FFFE">
 
     <LinearLayout
@@ -32,35 +31,6 @@
             tools:layout_editor_absoluteY="49dp" />
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="16sp">
-
-            <ImageView
-                android:id="@+id/imageButton"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                app:srcCompat="@drawable/facebook"
-                android:layout_marginRight="30dp"
-                />
-
-            <ImageView
-                android:id="@+id/imageButton2"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                app:srcCompat="@drawable/google" />
-        </LinearLayout>
-
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16sp"
-            android:gravity="center"
-            android:text="-------or use your email to log in-----"
-            android:textColor="#534D4D" />
 
 
         <EditText
@@ -114,6 +84,37 @@
             android:backgroundTint="#56B7C3"
             android:text="Signup"
             android:textSize="20sp" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:gravity="center"
+            android:text="-------or use your social to signup-----"
+            android:textColor="#534D4D" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16sp">
+
+            <ImageView
+                android:id="@+id/imageButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/facebook"
+                android:layout_marginRight="30dp"
+                />
+
+            <ImageView
+                android:id="@+id/imageButton2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/google" />
+        </LinearLayout>
+
+
 
         <TextView
             android:id="@+id/toLoign"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".pincreat"
+    tools:context=".activities.pincreat"
 
     android:backgroundTint="#F9FFFE">
 
@@ -25,12 +25,18 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16sp"
             android:fontFamily="@font/lato_bold"
-            android:text="Creat 5 digit pin"
+            android:text="Creat 6 digit pin"
             android:textColor="#56B7C3"
             android:textSize="32sp"
             tools:layout_editor_absoluteX="138dp"
             tools:layout_editor_absoluteY="49dp" />
 
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="317dp"
+            android:layout_height="272dp"
+            app:srcCompat="@drawable/otp" />
 
         <EditText
             android:id="@+id/e1"
@@ -41,7 +47,10 @@
             android:drawableStart="@drawable/baseline_fiber_pin_24"
             android:fontFamily="@font/lato_bold"
             android:hint="Enter your pin"
-            android:inputType="number" />
+            android:inputType="number"
+            android:shadowColor="#00BCD4"
+            android:shadowDx="12"
+            android:shadowDy="12" />
 
         <EditText
             android:id="@+id/e2"
