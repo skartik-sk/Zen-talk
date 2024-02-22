@@ -1,10 +1,16 @@
 package com.example.zen_talk.activities
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import com.example.zen_talk.R
 import com.example.zen_talk.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -12,26 +18,46 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.messaging.FirebaseMessaging
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var firebaseAuth: FirebaseAuth
     private val RC_SIGN_IN = 123 // Request code for Google Sign-In
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        FirebaseMessaging.getInstance().isAutoInitEnabled = true
         super.onCreate(savedInstanceState)
         val sharedPreferences = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
         val isFirstTime = sharedPreferences.getBoolean("is_first_time", true)
 
         if (isFirstTime) {
-             val editor = sharedPreferences.edit()
+            val editor = sharedPreferences.edit()
             editor.putBoolean("is_first_time", false)
             editor.apply()
             setupProperLogin()
         } else {
             setupPINLogin()
         }
+
+
+        getfcm()
     }
+
+    private fun getfcm() {
+        FirebaseMessaging.getInstance().token.addOnCompleteListener {
+            if (it.isSuccessful) {
+
+               // Toast.makeText(this, "khya ho rha he", Toast.LENGTH_SHORT).show()
+                val nayatoken = it.result
+
+                Log.i("Mytoken", nayatoken)
+            }
+        }
+
+    }
+
     private fun setupProperLogin() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -71,6 +97,7 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
     }
+
     private fun setupPINLogin() {
         // Start the PIN login activity (PIN login logic goes here)
         val intent = Intent(this, enterpin::class.java)
@@ -78,12 +105,10 @@ class MainActivity : AppCompatActivity() {
         finish()
     }
 
-        // Set a click listener for your Google Sign-In button
+    // Set a click listener for your Google Sign-In button
 
 
-
-        // Your existing code for email/password sign-in
-
+    // Your existing code for email/password sign-in
 
 
     private fun startGoogleSignIn() {
@@ -116,12 +141,17 @@ class MainActivity : AppCompatActivity() {
                                 val intent = Intent(this, home::class.java)
                                 startActivity(intent)
                             } else {
-                                Toast.makeText(this, "Google Sign-In failed", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this, "Google Sign-In failed", Toast.LENGTH_SHORT)
+                                    .show()
                             }
                         }
                 }
             } catch (e: ApiException) {
-                Toast.makeText(this, "Google Sign-In failed: ${e.localizedMessage}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    "Google Sign-In failed: ${e.localizedMessage}",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }
